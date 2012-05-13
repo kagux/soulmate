@@ -11,7 +11,7 @@ module Soulmate
     end
 
     def normalize(str)
-      str.downcase.gsub(/[^\w\d ]/i, '').strip
+      str.downcase.gsub(/[^0-9а-яa-z ]/i, '').strip
     end
 
   end
