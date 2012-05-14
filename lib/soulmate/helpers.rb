@@ -1,4 +1,5 @@
 # -*- encoding : utf-8 -*-
+require 'active_support/core_ext/string'
 module Soulmate
   module Helpers
 
@@ -12,7 +13,7 @@ module Soulmate
     end
 
     def normalize(str)
-      str.downcase.gsub(/[^0-9а-яa-z ]/i, '').strip
+      str.mb_chars.downcase.gsub(/[^0-9а-яa-z ]/i, '').strip
     end
 
   end
